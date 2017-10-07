@@ -41,7 +41,7 @@ $(function(){
             }
         },
         done: function(e, data){
-            var url = data.jqXHR.responseJSON.files[0].['url'];
+            var url = data.jqXHR.responseJSON.files[0]['url'];
             data.context.find('p').append('<i><a href="' + url + '">' + url + '</a></i>');
         },
         fail: function(e, data){
