@@ -25,7 +25,7 @@ if((NULL != $files) && $files['error'] == 0){
 
     $filename = tempnam('/home/uploads', '');
     unlink($filename);
-    $filename .= $ext;
+    $filename .= '.'.$ext;
     if(move_uploaded_file($files['tmp_name'], $filename)){
         $url = "http://werik.com/dl?".basename($filename);
         echoResponse("success", $files['name'], $url);
