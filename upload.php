@@ -3,7 +3,7 @@
 $allowed = array('png', 'jpg', 'gif', 'bmp', 'zip', '7z');
 
 $files = NULL;
-if(isset($_FILES['upl']){
+if(isset($_FILES['upl'])){
     $files = $_FILES['upl'];
 }
 
