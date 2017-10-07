@@ -31,9 +31,9 @@ $(function(){
             });
 
             var jqXHR = data.submit();
-            console.info(e,data);
         },
         progress: function(e, data){
+            console.log(data);
             var progress = parseInt(data.loaded / data.total * 100, 10);
             data.context.find('input').val(progress).change();
             data.context.find('i').append('<p>' + data.jqXHR.responseJSON.files[0]['url'] + '</p>');
@@ -41,11 +41,9 @@ $(function(){
             if(100 == progress){
                 data.context.removeClass('working');
             }
-            console.info(e,data);
         },
         fail: function(e, data){
             data.context.addClass('error');
-            console.error(e, data);
         }
     });
 
