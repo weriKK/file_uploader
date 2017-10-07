@@ -36,6 +36,7 @@ $(function(){
         progress: function(e, data){
             var progress = parseInt(data.loaded / data.total * 100, 10);
             data.context.find('input').val(progress).change();
+            data.context.find('i').append('<p>' + data.jqXHR.responseJSON.files[0]['url'] + '</p>');
 
             if(100 == progress){
                 data.context.removeClass('working');
