@@ -31,6 +31,7 @@ $(function(){
             });
 
             var jqXHR = data.submit();
+            console.info(e,data);
         },
         progress: function(e, data){
             var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -39,9 +40,11 @@ $(function(){
             if(100 == progress){
                 data.context.removeClass('working');
             }
+            console.info(e,data);
         },
         fail: function(e, data){
             data.context.addClass('error');
+            console.error(e, data);
         }
     });
 
