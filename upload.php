@@ -4,10 +4,10 @@ $allowed = array('png', 'jpg', 'gif', 'bmp', 'zip', '7z');
 
 function echoResponse($status, $filename, $url){
     if($status === "success"){
-        return '{"files": [ { "name": "'.$filename.'", "url": "'.$url.'" } ] }';
+        echo '{"files": [ { "name": "'.$filename.'", "url": "'.$url.'" } ] }';
     }
     else {
-        return '{"files": [ { "name": "'.$filename.'", "error": "error" } ] }';
+        echo '{"files": [ { "name": "'.$filename.'", "error": "error" } ] }';
     }
 }
 
