@@ -42,7 +42,8 @@ $(function(){
         },
         done: function(e, data){
             console.log(data);
-            data.context.find('i').append('<p>' + data.jqXHR.responseJSON.files[0]['url'] + '</p>');
+            data.context.find('p').append('<i>' + data.jqXHR.responseJSON.files[0]['url'] + '</i>');
+            
         },
         fail: function(e, data){
             data.context.addClass('error');

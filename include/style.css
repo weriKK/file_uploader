@@ -56,7 +56,7 @@ section, footer, header, aside{
     background-image:-moz-linear-gradient(top, #373a3d, #313437);
     background-image:linear-gradient(top, #373a3d, #313437);
 
-    width:250px;
+    width:500px;
     padding:30px;
     border-radius:3px;
 
@@ -127,7 +127,7 @@ section, footer, header, aside{
 }
 
 #upload ul li p{
-    width: 144px;
+    width: 344px;
     overflow: hidden;
     white-space: nowrap;
     color: #EEE;
